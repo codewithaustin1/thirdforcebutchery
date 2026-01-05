@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Thirdforce Butchery - Premium fresh meat cuts in Nairobi. Beef, goat, chicken, and value packs with same-day delivery.">
+    <title>Thirdforce Butchery | Premium Fresh Meat Cuts in Nairobi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ButcherShop",
+        "name": "Thirdforce Butchery",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947",
+        "description": "Premium quality fresh meat cuts in Nairobi. Locally sourced beef, goat, and chicken.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ngong Road",
+            "addressLocality": "Nairobi",
+            "addressCountry": "KE"
+        },
+        "priceRange": "KSh 450 - KSh 3,200",
+        "telephone": "+254700123456",
+        "openingHours": "Mo-Sa 08:00-20:00, Su 09:00-18:00"
+    }
+    </script>
+    <style>
+        /* CSS Variables with fallbacks */
+        :root {
+            --primary-color: #C62828;
+            --primary-light: #FF5F52;
+            --primary-dark: #8E0000;
+            --secondary-color: #4E342E;
+            --accent-color: #FF9800;
+            --light-color: #F5F5F5;
+            --gray-color: #757575;
+            --dark-color: #212121;
+            --success-color: #4CAF50;
+            --warning-color: #FFC107;
+            --error-color: #F44336;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            --spacing-xxl: 3rem;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-md: 1rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-xxl: 2rem;
+            --font-size-xxxl: 2.5rem;
+        }
+
+        /* Reset and Base Styles */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Focus Styles for Accessibility */
+        :focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* Skip to Content Link */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-decoration: none;
+            z-index: 9999;
+            border-radius: 0 0 var(--border-radius) 0;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            text-decoration: none;
+        }
+
+        .logo__icon {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--secondary-color);
+            line-height: 1.2;
+        }
+
+        .logo__title span {
+            color: var(--primary-color);
+        }
+
+        .logo__subtitle {
+            font-size: var(--font-size-xs);
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: var(--font-size-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--primary-color);
+            background-color: rgba(198, 40, 40, 0.05);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 80%;
+        }
+
+        /* Cart Icon */
+        .cart-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            padding: var(--spacing-sm);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .cart-button:hover,
+        .cart-button:focus {
+            background-color: rgba(198, 40, 40, 0.05);
+        }
+
+        .cart-button__icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .cart-button__count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            min-width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xs);
+            font-weight: bold;
+            padding: 0 4px;
+        }
+
+        /* Mobile Navigation Toggle */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-sm);
+            font-size: var(--font-size-xl);
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(198, 40, 40, 0.2), rgba(255, 152, 0, 0.2));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-xxxl);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-description {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-md);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            min-height: 44px;
+            min-width: 44px;
+            touch-action: manipulation;
+        }
+
+        .button:hover,
+        .button:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .button--outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .button--outline:hover,
+        .button--outline:focus {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .button--accent {
+            background-color: var(--accent-color);
+        }
+
+        .button--accent:hover,
+        .button--accent:focus {
+            background-color: #F57C00;
+        }
+
+        .button--block {
+            width: 100%;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .section__title {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            color: var(--secondary-color);
+            font-size: var(--font-size-xxl);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section__title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: var(--spacing-sm) auto;
+            border-radius: 2px;
+        }
+
+        /* Products Section */
+        .products-section {
+            background-color: white;
+        }
+
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .category-filter {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: white;
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: var(--font-size-sm);
+        }
+
+        .category-filter:hover,
+        .category-filter:focus {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .category-filter--active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .product-card__image-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-card__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-card__image {
+            transform: scale(1.05);
+        }
+
+        .product-card__badge {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background-color: var(--accent-color);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 4px;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+        }
+
+        .product-card__content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card__title {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-sm);
+            color: var(--secondary-color);
+            line-height: 1.3;
+        }
+
+        .product-card__description {
+            color: var(--gray-color);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+
+        .product-card__price {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .product-card__unit {
+            font-size: var(--font-size-sm);
+            color: var(--gray-color);
+            font-weight: normal;
+        }
+
+        /* Order Controls */
+        .order-controls {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .order-mode-toggle {
+            display: flex;
+            background: #f5f5f5;
+            border-radius: var(--border-radius);
+            padding: 2px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .order-mode-option {
+            flex: 1;
+            text-align: center;
+            padding: var(--spacing-sm);
+            border-radius: calc(var(--border-radius) - 2px);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            transition: var(--transition);
+            border: none;
+            background: none;
+        }
+
+        .order-mode-option:hover,
+        .order-mode-option:focus {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .order-mode-option--active {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .quantity-controls {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .quantity-input-group {
+            flex: 1;
+            position: relative;
+        }
+
+        .quantity-input {
+            width: 100%;
+            padding: var(--spacing-md);
+            padding-left: 40px;
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-md);
+            font-weight: 600;
+            transition: var(--transition);
+            -moz-appearance: textfield;
+        }
+
+        .quantity-input::-webkit-outer-spin-button,
+        .quantity-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .quantity-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
+        }
+
+        .quantity-input__prefix {
+            position: absolute;
+            left: var(--spacing-md);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-color);
+            font-weight: 600;
+        }
+
+        .quantity-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .quantity-button {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #eee;
+            background: white;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: var(--font-size-lg);
+            font-weight: bold;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-button:hover,
+        .quantity-button:focus {
+            border-color: var(--primary-color);
+            background-color: rgba(198, 40, 40, 0.05);
+        }
+
+        /* Dynamic Price Display */
+        .price-display {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            transition: var(--transition);
+        }
+
+        .price-display__label {
+            font-size: var(--font-size-sm);
+            color: var(--gray-color);
+            margin-bottom: var(--spacing-xs);
+            display: block;
+        }
+
+        .price-display__value {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .price-display__details {
+            font-size: var(--font-size-sm);
+            color: var(--gray-color);
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background-color: white;
+            padding: var(--spacing-xxl) 0;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-lg);
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            transform: translateY(-4px);
+        }
+
+        .badge__icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-xl);
+            color: white;
+        }
+
+        .badge__title {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            color: var(--secondary-color);
+        }
+
+        .badge__description {
+            color: var(--gray-color);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Cart Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            padding: var(--spacing-md);
+        }
+
+        .modal--active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal__content {
+            background-color: white;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal--active .modal__content {
+            transform: translateY(0);
+        }
+
+        .modal__header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .modal__close {
+            background: none;
+            border: none;
+            font-size: var(--font-size-xxl);
+            cursor: pointer;
+            color: var(--gray-color);
+            padding: var(--spacing-xs);
+            line-height: 1;
+            transition: var(--transition);
+        }
+
+        .modal__close:hover,
+        .modal__close:focus {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .modal__body {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .modal__footer {
+            padding: var(--spacing-lg);
+            border-top: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+
+        /* Cart Items */
+        .cart-items {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--gray-color);
+        }
+
+        .cart-empty__icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            color: #ddd;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid #eee;
+            gap: var(--spacing-md);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item__image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .cart-item__details {
+            flex: 1;
+        }
+
+        .cart-item__name {
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--secondary-color);
+        }
+
+        .cart-item__meta {
+            font-size: var(--font-size-sm);
+            color: var(--gray-color);
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .cart-item__price {
+            font-weight: 700;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .cart-item__remove {
+            background: none;
+            border: none;
+            color: var(--gray-color);
+            cursor: pointer;
+            padding: var(--spacing-xs);
+            transition: var(--transition);
+        }
+
+        .cart-item__remove:hover,
+        .cart-item__remove:focus {
+            color: var(--error-color);
+        }
+
+        .cart-summary {
+            border-top: 1px solid #eee;
+            padding-top: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .cart-summary__row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-sm);
+            font-size: var(--font-size-md);
+        }
+
+        .cart-summary__total {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            border-top: 2px solid #eee;
+            padding-top: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        /* Order Form */
+        .order-form-section {
+            background-color: #f9f9f9;
+        }
+
+        .order-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .form-label--required::after {
+            content: ' *';
+            color: var(--error-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-md);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
+        }
+
+        .form-control--error {
+            border-color: var(--error-color);
+        }
+
+        .form-error {
+            color: var(--error-color);
+            font-size: var(--font-size-sm);
+            margin-top: var(--spacing-xs);
+            display: none;
+        }
+
+        .form-error--visible {
+            display: block;
+        }
+
+        .delivery-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .delivery-option {
+            padding: var(--spacing-lg);
+            border: 2px solid #eee;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .delivery-option:hover,
+        .delivery-option:focus {
+            border-color: var(--primary-color);
+        }
+
+        .delivery-option--active {
+            border-color: var(--primary-color);
+            background-color: rgba(198, 40, 40, 0.05);
+        }
+
+        .delivery-option__icon {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+
+        .delivery-option__title {
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            color: var(--secondary-color);
+        }
+
+        .delivery-option__price {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background-color: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .review-card {
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .review-date {
+            font-size: var(--font-size-sm);
+            color: var(--gray-color);
+        }
+
+        .review-stars {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: var(--spacing-xxl) 0 var(--spacing-md);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-column__title {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-link a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-link a:hover,
+        .footer-link a:focus {
+            color: white;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: var(--spacing-lg);
+            right: var(--spacing-lg);
+            background-color: var(--success-color);
+            color: white;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            z-index: 1001;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.3s;
+            max-width: 400px;
+        }
+
+        .notification--visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .notification__icon {
+            font-size: var(--font-size-lg);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: var(--font-size-xxl);
+            }
+            
+            .section__title {
+                font-size: var(--font-size-xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: var(--spacing-lg);
+                box-shadow: var(--shadow-heavy);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 99;
+            }
+
+            .main-nav--active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .header-container {
+                padding: var(--spacing-sm) 0;
+            }
+
+            .hero-section {
+                background-attachment: scroll;
+            }
+
+            .delivery-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .badges-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-form {
+                padding: var(--spacing-lg);
+            }
+            
+            .notification {
+                left: var(--spacing-md);
+                right: var(--spacing-md);
+                max-width: none;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .site-header,
+            .cart-button,
+            .button,
+            .footer,
+            .notification {
+                display: none !important;
+            }
+            
+            .hero-section {
+                background: none !important;
+                color: black !important;
+                padding: 0 !important;
+            }
+            
+            .product-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #000000;
+                --secondary-color: #000000;
+                --accent-color: #000000;
+            }
+            
+            .button {
+                border: 2px solid black;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .product-card:hover {
+                transform: none;
+            }
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            
+            .site-header,
+            .product-card,
+            .order-form,
+            .review-card {
+                background-color: #1e1e1e;
+            }
+            
+            .quantity-input,
+            .form-control {
+                background-color: #2d2d2d;
+                border-color: #404040;
+                color: #e0e0e0;
+            }
+            
+            .price-display {
+                background: linear-gradient(135deg, #2d2d2d, #404040);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <a href="/" class="logo" aria-label="Thirdforce Butchery Home">
+                <div class="logo__icon" aria-hidden="true">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo__text">
+                    <div class="logo__title">THIRDFORCE <span>BUTCHERY</span></div>
+                    <div class="logo__subtitle">Premium Fresh Meat</div>
+                </div>
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul class="nav-list" role="menubar">
+                    <li role="none"><a href="#products" class="nav-link" role="menuitem">Products</a></li>
+                    <li role="none"><a href="#trust-badges" class="nav-link" role="menuitem">Why Choose Us</a></li>
+                    <li role="none"><a href="#order" class="nav-link" role="menuitem">Order</a></li>
+                    <li role="none"><a href="#reviews" class="nav-link" role="menuitem">Reviews</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Cart Button -->
+            <button class="cart-button" id="cartButton" aria-label="Open cart" aria-expanded="false">
+                <i class="fas fa-shopping-cart cart-button__icon" aria-hidden="true"></i>
+                <span class="cart-button__count" id="cartCount" aria-live="polite">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">Premium Quality Fresh Meat Cuts</h1>
+                    <p class="hero-description">Locally sourced beef, goat, and chicken. Hand-cut by our expert butchers and delivered to your door. Experience the Thirdforce difference.</p>
+                    <div class="hero-actions">
+                        <a href="#products" class="button">Shop Now</a>
+                        <a href="#order" class="button button--outline">Order Online</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="section__title">Our Premium Cuts</h2>
+                
+                <!-- Category Filters -->
+                <div class="category-filters" role="tablist" aria-label="Product categories">
+                    <button class="category-filter category-filter--active" data-category="all" role="tab" aria-selected="true" aria-controls="products-grid">
+                        All Products
+                    </button>
+                    <button class="category-filter" data-category="beef" role="tab" aria-selected="false" aria-controls="products-grid">
+                        Beef Cuts
+                    </button>
+                    <button class="category-filter" data-category="goat" role="tab" aria-selected="false" aria-controls="products-grid">
+                        Goat Meat
+                    </button>
+                    <button class="category-filter" data-category="chicken" role="tab" aria-selected="false" aria-controls="products-grid">
+                        Chicken
+                    </button>
+                    <button class="category-filter" data-category="value-pack" role="tab" aria-selected="false" aria-controls="products-grid">
+                        Value Packs
+                    </button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid" role="tabpanel">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges -->
+        <section id="trust-badges" class="section trust-badges" aria-labelledby="trust-title">
+            <div class="container">
+                <h2 id="trust-title" class="section__title">Why Choose Thirdforce</h2>
+                <div class="badges-grid">
+                    <div class="badge">
+                        <div class="badge__icon" aria-hidden="true">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="badge__title">Food Safety Certified</h3>
+                        <p class="badge__description">Highest hygiene standards and regular inspections</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge__icon" aria-hidden="true">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="badge__title">Free Delivery</h3>
+                        <p class="badge__description">On orders over KSh 2,000 within Nairobi</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge__icon" aria-hidden="true">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="badge__title">Locally Sourced</h3>
+                        <p class="badge__description">Fresh from trusted Kenyan farms daily</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge__icon" aria-hidden="true">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="badge__title">Same Day Delivery</h3>
+                        <p class="badge__description">Order before 2 PM for same-day delivery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Modal -->
+        <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2 id="cart-title" class="modal__title">Your Shopping Cart</h2>
+                    <button class="modal__close" id="closeCart" aria-label="Close cart">&times;</button>
+                </div>
+                <div class="modal__body">
+                    <div class="cart-items" id="cartItems">
+                        <!-- Cart items loaded dynamically -->
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <div class="cart-summary">
+                        <div class="cart-summary__row">
+                            <span>Subtotal</span>
+                            <span id="cartSubtotal">KSh 0</span>
+                        </div>
+                        <div class="cart-summary__row">
+                            <span>Delivery Fee</span>
+                            <span id="cartDelivery">KSh 0</span>
+                        </div>
+                        <div class="cart-summary__row cart-summary__total">
+                            <span>Total</span>
+                            <span id="cartTotal">KSh 0</span>
+                        </div>
+                    </div>
+                    <button class="button button--block" id="checkoutButton">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <section id="order" class="section order-form-section" aria-labelledby="order-title">
+            <div class="container">
+                <h2 id="order-title" class="section__title">Place Your Order</h2>
+                <form class="order-form" id="orderForm" novalidate>
+                    <div class="form-group">
+                        <label for="customerName" class="form-label form-label--required">Full Name</label>
+                        <input type="text" id="customerName" class="form-control" required aria-required="true" autocomplete="name">
+                        <div class="form-error" id="nameError">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone" class="form-label form-label--required">Phone Number</label>
+                        <input type="tel" id="customerPhone" class="form-control" required aria-required="true" pattern="[0-9]{10}" placeholder="0712345678" autocomplete="tel">
+                        <div class="form-error" id="phoneError">Please enter a valid 10-digit phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail" class="form-label form-label--required">Email Address</label>
+                        <input type="email" id="customerEmail" class="form-control" required aria-required="true" autocomplete="email">
+                        <div class="form-error" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label form-label--required">Delivery Method</label>
+                        <div class="delivery-options">
+                            <div class="delivery-option delivery-option--active" id="deliveryOption" role="radio" aria-checked="true" tabindex="0">
+                                <div class="delivery-option__icon" aria-hidden="true">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="delivery-option__title">Delivery</div>
+                                <div class="delivery-option__price">KSh 150</div>
+                                <div class="delivery-option__note">Free on orders over KSh 2,000</div>
+                            </div>
+                            <div class="delivery-option" id="pickupOption" role="radio" aria-checked="false" tabindex="0">
+                                <div class="delivery-option__icon" aria-hidden="true">
+                                    <i class="fas fa-store"></i>
+                                </div>
+                                <div class="delivery-option__title">Pickup</div>
+                                <div class="delivery-option__price">Free</div>
+                                <div class="delivery-option__note">Ngong Road, Nairobi</div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="deliveryMethod" value="delivery">
+                    </div>
+
+                    <div class="form-group" id="addressGroup">
+                        <label for="deliveryAddress" class="form-label form-label--required">Delivery Address</label>
+                        <textarea id="deliveryAddress" class="form-control" rows="3" required aria-required="true" autocomplete="street-address"></textarea>
+                        <div class="form-error" id="addressError">Please enter your delivery address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialInstructions" class="form-label">Special Instructions</label>
+                        <textarea id="specialInstructions" class="form-control" rows="3" placeholder="Any specific cutting preferences or delivery instructions..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="cart-summary">
+                                <div class="cart-summary__row">
+                                    <span>Subtotal</span>
+                                    <span id="orderSubtotal">KSh 0</span>
+                                </div>
+                                <div class="cart-summary__row">
+                                    <span>Delivery</span>
+                                    <span id="orderDelivery">KSh 0</span>
+                                </div>
+                                <div class="cart-summary__row cart-summary__total">
+                                    <span>Total</span>
+                                    <span id="orderTotal">KSh 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button--block" id="submitOrder">
+                        Place Order - <span id="orderTotalButton">KSh 0</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section reviews-section" aria-labelledby="reviews-title">
+            <div class="container">
+                <h2 id="reviews-title" class="section__title">Customer Reviews</h2>
+                <div class="reviews-grid">
+                    <!-- Reviews will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Thirdforce Butchery</h3>
+                    <p>Providing premium quality fresh meat to Nairobi neighborhoods since 2015. We pride ourselves on quality, freshness, and excellent customer service.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="https://maps.google.com/?q=Ngong+Road,Nairobi" target="_blank" rel="noopener">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Ngong Road, Nairobi</span>
+                            </a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="tel:+254700123456">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>+254 700 123 456</span>
+                            </a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="mailto:info@thirdforcebutchery.co.ke">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span>info@thirdforcebutchery.co.ke</span>
+                            </a>
+                        </li>
+                        <li class="footer-link">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <span>Mon-Sat: 8am-8pm, Sun: 9am-6pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#products"><i class="fas fa-utensils" aria-hidden="true"></i> Our Products</a></li>
+                        <li class="footer-link"><a href="#order"><i class="fas fa-shopping-cart" aria-hidden="true"></i> Place Order</a></li>
+                        <li class="footer-link"><a href="#reviews"><i class="fas fa-star" aria-hidden="true"></i> Customer Reviews</a></li>
+                        <li class="footer-link"><a href="#contact"><i class="fas fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear">2023</span> Thirdforce Butchery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification" role="alert" aria-live="assertive" aria-atomic="true">
+        <i class="fas fa-check-circle notification__icon" aria-hidden="true"></i>
+        <span class="notification__message" id="notificationMessage"></span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Product Data Service
+        class ProductService {
+            static products = [
+                {
+                    id: 1,
+                    name: "Premium Beef Steak",
+                    category: "beef",
+                    description: "Tender, well-marbled beef steak perfect for grilling or pan-searing",
+                    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+                    pricePerKg: 850,
+                    unit: "kg",
+                    badge: "Popular",
+                    inStock: true,
+                    minWeight: 0.5,
+                    maxWeight: 5
+                },
+                {
+                    id: 2,
+                    name: "Fresh Goat Meat",
+                    category: "goat",
+                    description: "Lean and flavorful goat meat, ideal for stews and grills",
+                    image: "https://images.unsplash.com/photo-1602471594765-0485f58d5d0d",
+                    pricePerKg: 750,
+                    unit: "kg",
+                    badge: null,
+                    inStock: true,
+                    minWeight: 1,
+                    maxWeight: 10
+                },
+                {
+                    id: 3,
+                    name: "Whole Chicken",
+                    category: "chicken",
+                    description: "Fresh whole chicken, perfect for roasting or stewing",
+                    image: "https://images.unsplash.com/photo-1587593810167-a84950ea15d1",
+                    pricePerKg: 550,
+                    unit: "each",
+                    badge: null,
+                    inStock: true,
+                    minWeight: 1.5,
+                    maxWeight: 2.5
+                },
+                {
+                    id: 4,
+                    name: "Beef Value Pack",
+                    category: "value-pack",
+                    description: "Assorted beef cuts including steak, mince, and ribs",
+                    image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba",
+                    pricePerKg: 3200,
+                    unit: "3kg pack",
+                    badge: "Best Value",
+                    inStock: true,
+                    minWeight: 3,
+                    maxWeight: 3
+                },
+                {
+                    id: 5,
+                    name: "Beef Mince",
+                    category: "beef",
+                    description: "Freshly minced beef, perfect for burgers and meatballs",
+                    image: "https://images.unsplash.com/photo-1602471594765-0485f58d5d0d",
+                    pricePerKg: 600,
+                    unit: "kg",
+                    badge: null,
+                    inStock: true,
+                    minWeight: 0.5,
+                    maxWeight: 5
+                },
+                {
+                    id: 6,
+                    name: "Chicken Wings",
+                    category: "chicken",
+                    description: "Fresh chicken wings, great for frying or grilling",
+                    image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791",
+                    pricePerKg: 450,
+                    unit: "kg",
+                    badge: null,
+                    inStock: true,
+                    minWeight: 0.5,
+                    maxWeight: 5
+                },
+                {
+                    id: 7,
+                    name: "Goat Value Pack",
+                    category: "value-pack",
+                    description: "Assorted goat cuts including ribs, stew meat, and chops",
+                    image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791",
+                    pricePerKg: 2800,
+                    unit: "2.5kg pack",
+                    badge: "Special",
+                    inStock: true,
+                    minWeight: 2.5,
+                    maxWeight: 2.5
+                },
+                {
+                    id: 8,
+                    name: "Beef Ribs",
+                    category: "beef",
+                    description: "Flavorful beef ribs, perfect for slow cooking or grilling",
+                    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d",
+                    pricePerKg: 700,
+                    unit: "kg",
+                    badge: null,
+                    inStock: true,
+                    minWeight: 1,
+                    maxWeight: 5
+                }
+            ];
+
+            static getProducts(category = 'all') {
+                if (category === 'all') return this.products;
+                return this.products.filter(product => product.category === category);
+            }
+
+            static getProductById(id) {
+                return this.products.find(product => product.id === id);
+            }
+        }
+
+        // Review Data Service
+        class ReviewService {
+            static reviews = [
+                {
+                    id: 1,
+                    name: "James M.",
+                    date: "2023-10-15",
+                    rating: 5,
+                    comment: "The beef from Thirdforce is consistently tender and flavorful. I've been a customer for 2 years and their quality never disappoints. The value packs are perfect for my family.",
+                    avatar: "JM"
+                },
+                {
+                    id: 2,
+                    name: "Sarah W.",
+                    date: "2023-10-10",
+                    rating: 5,
+                    comment: "I ordered goat meat for a family gathering and everyone complimented how fresh and well-prepared it was. Delivery was prompt and the meat was perfectly packaged.",
+                    avatar: "SW"
+                },
+                {
+                    id: 3,
+                    name: "David K.",
+                    date: "2023-10-05",
+                    rating: 4.5,
+                    comment: "Their chicken is always fresh and reasonably priced. I appreciate that they offer different cutting options. The butchery is clean and the staff is knowledgeable.",
+                    avatar: "DK"
+                }
+            ];
+
+            static getReviews() {
+                return this.reviews;
+            }
+        }
+
+        // Cart Service
+        class CartService {
+            static cartKey = 'thirdforce_cart';
+            static cart = JSON.parse(localStorage.getItem(this.cartKey)) || [];
+
+            static addItem(productId, quantity, orderMode = 'weight', customPrice = null) {
+                const product = ProductService.getProductById(productId);
+                if (!product) return false;
+
+                let price;
+                let displayQuantity;
+
+                if (orderMode === 'weight') {
+                    price = product.pricePerKg * quantity;
+                    displayQuantity = quantity;
+                } else {
+                    price = customPrice;
+                    displayQuantity = customPrice / product.pricePerKg;
+                }
+
+                const cartItem = {
+                    id: product.id,
+                    name: product.name,
+                    category: product.category,
+                    pricePerKg: product.pricePerKg,
+                    quantity: displayQuantity,
+                    price: price,
+                    orderMode: orderMode,
+                    unit: product.unit,
+                    image: product.image
+                };
+
+                this.cart.push(cartItem);
+                this.saveCart();
+                return true;
+            }
+
+            static removeItem(index) {
+                this.cart.splice(index, 1);
+                this.saveCart();
+            }
+
+            static clearCart() {
+                this.cart = [];
+                this.saveCart();
+            }
+
+            static getCart() {
+                return this.cart;
+            }
+
+            static getCartCount() {
+                return this.cart.length;
+            }
+
+            static getSubtotal() {
+                return this.cart.reduce((total, item) => total + item.price, 0);
+            }
+
+            static saveCart() {
+                localStorage.setItem(this.cartKey, JSON.stringify(this.cart));
+            }
+        }
+
+        // Delivery Service
+        class DeliveryService {
+            static deliveryFee = 150;
+            static freeDeliveryThreshold = 2000;
+
+            static calculateDeliveryFee(subtotal, method) {
+                if (method === 'pickup') return 0;
+                if (subtotal >= this.freeDeliveryThreshold) return 0;
+                return this.deliveryFee;
+            }
+        }
+
+        // Notification Service
+        class NotificationService {
+            static show(message, duration = 3000) {
+                const notification = document.getElementById('notification');
+                const messageEl = document.getElementById('notificationMessage');
+                
+                messageEl.textContent = message;
+                notification.classList.add('notification--visible');
+                
+                setTimeout(() => {
+                    notification.classList.remove('notification--visible');
+                }, duration);
+            }
+        }
+
+        // Form Validation Service
+        class FormValidationService {
+            static validateName(name) {
+                return name.trim().length >= 2;
+            }
+
+            static validatePhone(phone) {
+                return /^[0-9]{10}$/.test(phone.replace(/\s/g, ''));
+            }
+
+            static validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            static validateAddress(address) {
+                return address.trim().length >= 10;
+            }
+        }
+
+        // UI Components
+        class ProductCard {
+            constructor(product) {
+                this.product = product;
+                this.orderMode = 'weight';
+                this.quantity = product.minWeight || 1;
+            }
+
+            render() {
+                return `
+                    <div class="product-card" data-product-id="${this.product.id}" data-category="${this.product.category}">
+                        <div class="product-card__image-container">
+                            <img src="${this.product.image}" alt="${this.product.name}" class="product-card__image" loading="lazy">
+                            ${this.product.badge ? `<span class="product-card__badge">${this.product.badge}</span>` : ''}
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">${this.product.name}</h3>
+                            <p class="product-card__description">${this.product.description}</p>
+                            <div class="product-card__price">
+                                KSh <span class="price-display__value" id="price-${this.product.id}">${this.calculatePrice()}</span>
+                                <span class="product-card__unit">/${this.product.unit}</span>
+                            </div>
+                            
+                            <div class="order-controls">
+                                <div class="order-mode-toggle">
+                                    <button class="order-mode-option order-mode-option--active" data-mode="weight" data-product="${this.product.id}">
+                                        By Weight
+                                    </button>
+                                    <button class="order-mode-option" data-mode="price" data-product="${this.product.id}">
+                                        By Total Price
+                                    </button>
+                                </div>
+                                
+                                <div class="price-display" id="priceDisplay-${this.product.id}">
+                                    <span class="price-display__label">${this.orderMode === 'weight' ? 'Weight' : 'Price'}</span>
+                                    <div class="price-display__value">
+                                        ${this.orderMode === 'weight' ? 
+                                            `${this.quantity} ${this.product.unit === 'each' ? 'piece' : 'kg'}` : 
+                                            `KSh ${this.quantity * this.product.pricePerKg}`
+                                        }
+                                    </div>
+                                    <div class="price-display__details">
+                                        ${this.orderMode === 'weight' ? 
+                                            `KSh ${this.product.pricePerKg}/kg` : 
+                                            `${(this.quantity * this.product.pricePerKg / this.product.pricePerKg).toFixed(2)} kg`
+                                        }
+                                    </div>
+                                </div>
+                                
+                                <div class="quantity-controls">
+                                    <div class="quantity-input-group">
+                                        <span class="quantity-input__prefix">
+                                            ${this.orderMode === 'weight' ? (this.product.unit === 'each' ? 'Pcs' : 'Kg') : 'KSh'}
+                                        </span>
+                                        <input 
+                                            type="number" 
+                                            class="quantity-input" 
+                                            id="quantity-${this.product.id}"
+                                            value="${this.quantity}"
+                                            min="${this.product.minWeight}"
+                                            ${this.product.maxWeight ? `max="${this.product.maxWeight}"` : ''}
+                                            step="${this.product.unit === 'each' ? '1' : '0.1'}"
+                                            aria-label="${this.orderMode === 'weight' ? 'Quantity in kilograms' : 'Total price in Kenya Shillings'}"
+                                        >
+                                    </div>
+                                    <div class="quantity-buttons">
+                                        <button class="quantity-button" data-action="increase" data-product="${this.product.id}" aria-label="Increase quantity">+</button>
+                                        <button class="quantity-button" data-action="decrease" data-product="${this.product.id}" aria-label="Decrease quantity">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="button button--accent button--block add-to-cart" data-product="${this.product.id}">
+                                <i class="fas fa-cart-plus" aria-hidden="true"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            calculatePrice() {
+                if (this.product.unit === 'each') {
+                    return this.product.pricePerKg;
+                }
+                return this.product.pricePerKg;
+            }
+
+            updatePriceDisplay() {
+                const priceDisplay = document.getElementById(`priceDisplay-${this.product.id}`);
+                if (!priceDisplay) return;
+
+                const totalPrice = this.quantity * this.product.pricePerKg;
+                
+                if (this.orderMode === 'weight') {
+                    priceDisplay.innerHTML = `
+                        <span class="price-display__label">Weight</span>
+                        <div class="price-display__value">${this.quantity} ${this.product.unit === 'each' ? 'piece' : 'kg'}</div>
+                        <div class="price-display__details">KSh ${this.product.pricePerKg}/kg</div>
+                    `;
+                } else {
+                    const weight = totalPrice / this.product.pricePerKg;
+                    priceDisplay.innerHTML = `
+                        <span class="price-display__label">Price</span>
+                        <div class="price-display__value">KSh ${totalPrice.toFixed(0)}</div>
+                        <div class="price-display__details">${weight.toFixed(2)} kg</div>
+                    `;
+                }
+            }
+        }
+
+        // Main Application
+        class ThirdforceButcheryApp {
+            constructor() {
+                this.currentCategory = 'all';
+                this.deliveryMethod = 'delivery';
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.renderProducts();
+                this.renderReviews();
+                this.updateCartDisplay();
+                this.updateOrderSummary();
+                this.setCurrentYear();
+                this.setupAccessibility();
+            }
+
+            setupEventListeners() {
+                // Mobile Navigation
+                document.getElementById('mobileNavToggle').addEventListener('click', () => this.toggleMobileNav());
+                
+                // Category Filters
+                document.querySelectorAll('.category-filter').forEach(filter => {
+                    filter.addEventListener('click', (e) => this.handleCategoryFilter(e));
+                });
+
+                // Cart
+                document.getElementById('cartButton').addEventListener('click', () => this.openCart());
+                document.getElementById('closeCart').addEventListener('click', () => this.closeCart());
+                document.getElementById('checkoutButton').addEventListener('click', () => this.proceedToCheckout());
+
+                // Order Form
+                document.getElementById('orderForm').addEventListener('submit', (e) => this.handleOrderSubmit(e));
+                document.getElementById('deliveryOption').addEventListener('click', () => this.setDeliveryMethod('delivery'));
+                document.getElementById('pickupOption').addEventListener('click', () => this.setDeliveryMethod('pickup'));
+
+                // Modal close on outside click
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            this.closeCart();
+                        }
+                    });
+                });
+
+                // Escape key to close modal
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.closeCart();
+                    }
+                });
+            }
+
+            setupAccessibility() {
+                // Add aria-live region for dynamic updates
+                const liveRegion = document.createElement('div');
+                liveRegion.setAttribute('aria-live', 'polite');
+                liveRegion.setAttribute('aria-atomic', 'true');
+                liveRegion.style.position = 'absolute';
+                liveRegion.style.width = '1px';
+                liveRegion.style.height = '1px';
+                liveRegion.style.padding = '0';
+                liveRegion.style.margin = '-1px';
+                liveRegion.style.overflow = 'hidden';
+                liveRegion.style.clip = 'rect(0, 0, 0, 0)';
+                liveRegion.style.whiteSpace = 'nowrap';
+                liveRegion.style.border = '0';
+                document.body.appendChild(liveRegion);
+            }
+
+            toggleMobileNav() {
+                const nav = document.getElementById('mainNav');
+                const toggle = document.getElementById('mobileNavToggle');
+                const isExpanded = nav.classList.toggle('main-nav--active');
+                
+                toggle.setAttribute('aria-expanded', isExpanded);
+                toggle.innerHTML = isExpanded ? 
+                    '<i class="fas fa-times" aria-hidden="true"></i>' : 
+                    '<i class="fas fa-bars" aria-hidden="true"></i>';
+            }
+
+            handleCategoryFilter(e) {
+                const filter = e.currentTarget;
+                const category = filter.dataset.category;
+                
+                // Update active filter
+                document.querySelectorAll('.category-filter').forEach(f => {
+                    f.classList.remove('category-filter--active');
+                    f.setAttribute('aria-selected', 'false');
+                });
+                
+                filter.classList.add('category-filter--active');
+                filter.setAttribute('aria-selected', 'true');
+                
+                // Update products
+                this.currentCategory = category;
+                this.renderProducts();
+            }
+
+            renderProducts() {
+                const productsGrid = document.getElementById('productsGrid');
+                const products = ProductService.getProducts(this.currentCategory);
+                
+                productsGrid.innerHTML = '';
+                
+                products.forEach(product => {
+                    const productCard = new ProductCard(product);
+                    productsGrid.innerHTML += productCard.render();
+                });
+                
+                // Add event listeners to dynamic elements
+                this.setupProductEventListeners();
+            }
+
+            setupProductEventListeners() {
+                // Order mode toggles
+                document.querySelectorAll('.order-mode-option').forEach(button => {
+                    button.addEventListener('click', (e) => this.handleOrderModeChange(e));
+                });
+
+                // Quantity inputs
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.addEventListener('input', (e) => this.handleQuantityChange(e));
+                    input.addEventListener('change', (e) => this.handleQuantityChange(e));
+                });
+
+                // Quantity buttons
+                document.querySelectorAll('.quantity-button').forEach(button => {
+                    button.addEventListener('click', (e) => this.handleQuantityButton(e));
+                });
+
+                // Add to cart buttons
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', (e) => this.handleAddToCart(e));
+                });
+            }
+
+            handleOrderModeChange(e) {
+                const button = e.currentTarget;
+                const productId = parseInt(button.dataset.product);
+                const mode = button.dataset.mode;
+                
+                // Update active button
+                const parent = button.parentElement;
+                parent.querySelectorAll('.order-mode-option').forEach(btn => {
+                    btn.classList.remove('order-mode-option--active');
+                });
+                button.classList.add('order-mode-option--active');
+                
+                // Update input
+                const input = document.getElementById(`quantity-${productId}`);
+                const product = ProductService.getProductById(productId);
+                
+                if (mode === 'weight') {
+                    input.min = product.minWeight;
+                    input.step = product.unit === 'each' ? '1' : '0.1';
+                    input.value = product.minWeight || 1;
+                    input.previousElementSibling.textContent = product.unit === 'each' ? 'Pcs' : 'Kg';
+                } else {
+                    input.min = product.pricePerKg * product.minWeight;
+                    input.step = 50;
+                    input.value = product.pricePerKg * (product.minWeight || 1);
+                    input.previousElementSibling.textContent = 'KSh';
+                }
+                
+                // Update display
+                this.updateProductDisplay(productId);
+            }
+
+            handleQuantityChange(e) {
+                const input = e.currentTarget;
+                const productId = parseInt(input.id.split('-')[1]);
+                this.updateProductDisplay(productId);
+            }
+
+            handleQuantityButton(e) {
+                const button = e.currentTarget;
+                const productId = parseInt(button.dataset.product);
+                const action = button.dataset.action;
+                const input = document.getElementById(`quantity-${productId}`);
+                const product = ProductService.getProductById(productId);
+                
+                let value = parseFloat(input.value) || 0;
+                const step = parseFloat(input.step) || (product.unit === 'each' ? 1 : 0.1);
+                
+                if (action === 'increase') {
+                    value += step;
+                    if (product.maxWeight && value > product.maxWeight) {
+                        value = product.maxWeight;
+                    }
+                } else {
+                    value -= step;
+                    if (value < product.minWeight) {
+                        value = product.minWeight;
+                    }
+                }
+                
+                input.value = value.toFixed(product.unit === 'each' ? 0 : 1);
+                this.updateProductDisplay(productId);
+            }
+
+            updateProductDisplay(productId) {
+                const product = ProductService.getProductById(productId);
+                const input = document.getElementById(`quantity-${productId}`);
+                const modeButton = document.querySelector(`.order-mode-option[data-product="${productId}"].order-mode-option--active`);
+                const mode = modeButton ? modeButton.dataset.mode : 'weight';
+                
+                let quantity = parseFloat(input.value) || product.minWeight || 1;
+                const priceDisplay = document.getElementById(`priceDisplay-${productId}`);
+                
+                if (!priceDisplay) return;
+                
+                if (mode === 'weight') {
+                    const totalPrice = quantity * product.pricePerKg;
+                    priceDisplay.innerHTML = `
+                        <span class="price-display__label">Weight</span>
+                        <div class="price-display__value">${quantity} ${product.unit === 'each' ? 'piece' : 'kg'}</div>
+                        <div class="price-display__details">KSh ${product.pricePerKg}/kg</div>
+                    `;
+                } else {
+                    const weight = quantity / product.pricePerKg;
+                    priceDisplay.innerHTML = `
+                        <span class="price-display__label">Price</span>
+                        <div class="price-display__value">KSh ${quantity.toFixed(0)}</div>
+                        <div class="price-display__details">${weight.toFixed(2)} kg</div>
+                    `;
+                }
+            }
+
+            handleAddToCart(e) {
+                const button = e.currentTarget;
+                const productId = parseInt(button.dataset.product);
+                const product = ProductService.getProductById(productId);
+                
+                const input = document.getElementById(`quantity-${productId}`);
+                const quantity = parseFloat(input.value) || product.minWeight || 1;
+                
+                const modeButton = document.querySelector(`.order-mode-option[data-product="${productId}"].order-mode-option--active`);
+                const mode = modeButton ? modeButton.dataset.mode : 'weight';
+                
+                const customPrice = mode === 'price' ? quantity : null;
+                const weight = mode === 'weight' ? quantity : quantity / product.pricePerKg;
+                
+                CartService.addItem(productId, weight, mode, customPrice);
+                this.updateCartDisplay();
+                this.updateOrderSummary();
+                
+                NotificationService.show(`${product.name} added to cart!`);
+                
+                // Reset to default
+                if (mode === 'weight') {
+                    input.value = product.minWeight || 1;
+                } else {
+                    input.value = product.pricePerKg * (product.minWeight || 1);
+                }
+                this.updateProductDisplay(productId);
+            }
+
+            updateCartDisplay() {
+                const cart = CartService.getCart();
+                const cartCount = document.getElementById('cartCount');
+                const cartItems = document.getElementById('cartItems');
+                const cartSubtotal = document.getElementById('cartSubtotal');
+                const cartDelivery = document.getElementById('cartDelivery');
+                const cartTotal = document.getElementById('cartTotal');
+                
+                // Update count
+                cartCount.textContent = cart.length;
+                cartCount.setAttribute('aria-label', `${cart.length} items in cart`);
+                
+                // Update items
+                if (cart.length === 0) {
+                    cartItems.innerHTML = `
+                        <div class="cart-empty">
+                            <div class="cart-empty__icon" aria-hidden="true">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <p>Your cart is empty</p>
+                            <p class="cart-empty__hint">Add some delicious meat to get started!</p>
+                        </div>
+                    `;
+                } else {
+                    cartItems.innerHTML = cart.map((item, index) => `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}" class="cart-item__image">
+                            <div class="cart-item__details">
+                                <div class="cart-item__name">${item.name}</div>
+                                <div class="cart-item__meta">
+                                    <span>${item.quantity.toFixed(2)} ${item.unit === 'each' ? 'piece' : 'kg'}</span>
+                                    <span>•</span>
+                                    <span>${item.orderMode === 'weight' ? 'By weight' : 'By price'}</span>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">KSh ${item.price.toFixed(0)}</div>
+                            <button class="cart-item__remove" data-index="${index}" aria-label="Remove ${item.name} from cart">
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    `).join('');
+                    
+                    // Add remove event listeners
+                    document.querySelectorAll('.cart-item__remove').forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            const index = parseInt(e.currentTarget.dataset.index);
+                            CartService.removeItem(index);
+                            this.updateCartDisplay();
+                            this.updateOrderSummary();
+                            NotificationService.show('Item removed from cart');
+                        });
+                    });
+                }
+                
+                // Update totals
+                const subtotal = CartService.getSubtotal();
+                const deliveryFee = DeliveryService.calculateDeliveryFee(subtotal, this.deliveryMethod);
+                const total = subtotal + deliveryFee;
+                
+                cartSubtotal.textContent = `KSh ${subtotal.toFixed(0)}`;
+                cartDelivery.textContent = `KSh ${deliveryFee.toFixed(0)}`;
+                cartTotal.textContent = `KSh ${total.toFixed(0)}`;
+            }
+
+            updateOrderSummary() {
+                const subtotal = CartService.getSubtotal();
+                const deliveryFee = DeliveryService.calculateDeliveryFee(subtotal, this.deliveryMethod);
+                const total = subtotal + deliveryFee;
+                
+                document.getElementById('orderSubtotal').textContent = `KSh ${subtotal.toFixed(0)}`;
+                document.getElementById('orderDelivery').textContent = `KSh ${deliveryFee.toFixed(0)}`;
+                document.getElementById('orderTotal').textContent = `KSh ${total.toFixed(0)}`;
+                document.getElementById('orderTotalButton').textContent = `KSh ${total.toFixed(0)}`;
+            }
+
+            openCart() {
+                const modal = document.getElementById('cartModal');
+                modal.classList.add('modal--active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                
+                // Update cart display
+                this.updateCartDisplay();
+            }
+
+            closeCart() {
+                const modal = document.getElementById('cartModal');
+                modal.classList.remove('modal--active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            setDeliveryMethod(method) {
+                this.deliveryMethod = method;
+                
+                // Update UI
+                document.getElementById('deliveryOption').classList.toggle('delivery-option--active', method === 'delivery');
+                document.getElementById('pickupOption').classList.toggle('delivery-option--active', method === 'pickup');
+                document.getElementById('deliveryOption').setAttribute('aria-checked', method === 'delivery');
+                document.getElementById('pickupOption').setAttribute('aria-checked', method === 'pickup');
+                document.getElementById('deliveryMethod').value = method;
+                
+                // Show/hide address field
+                const addressGroup = document.getElementById('addressGroup');
+                if (method === 'delivery') {
+                    addressGroup.style.display = 'block';
+                    document.getElementById('deliveryAddress').required = true;
+                } else {
+                    addressGroup.style.display = 'none';
+                    document.getElementById('deliveryAddress').required = false;
+                }
+                
+                // Update order summary
+                this.updateOrderSummary();
+            }
+
+            proceedToCheckout() {
+                if (CartService.getCartCount() === 0) {
+                    NotificationService.show('Your cart is empty. Add some items first.');
+                    return;
+                }
+                
+                this.closeCart();
+                document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+                
+                // Focus on first form field
+                setTimeout(() => {
+                    document.getElementById('customerName').focus();
+                }, 500);
+            }
+
+            async handleOrderSubmit(e) {
+                e.preventDefault();
+                
+                // Validate form
+                const name = document.getElementById('customerName').value.trim();
+                const phone = document.getElementById('customerPhone').value.trim();
+                const email = document.getElementById('customerEmail').value.trim();
+                const address = document.getElementById('deliveryAddress').value.trim();
+                
+                let isValid = true;
+                
+                // Clear previous errors
+                document.querySelectorAll('.form-error').forEach(error => {
+                    error.classList.remove('form-error--visible');
+                });
+                
+                // Validate name
+                if (!FormValidationService.validateName(name)) {
+                    document.getElementById('nameError').classList.add('form-error--visible');
+                    isValid = false;
+                }
+                
+                // Validate phone
+                if (!FormValidationService.validatePhone(phone)) {
+                    document.getElementById('phoneError').classList.add('form-error--visible');
+                    isValid = false;
+                }
+                
+                // Validate email
+                if (!FormValidationService.validateEmail(email)) {
+                    document.getElementById('emailError').classList.add('form-error--visible');
+                    isValid = false;
+                }
+                
+                // Validate address if delivery
+                if (this.deliveryMethod === 'delivery' && !FormValidationService.validateAddress(address)) {
+                    document.getElementById('addressError').classList.add('form-error--visible');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    NotificationService.show('Please fix the errors in the form');
+                    return;
+                }
+                
+                if (CartService.getCartCount() === 0) {
+                    NotificationService.show('Your cart is empty. Add some items first.');
+                    return;
+                }
+                
+                // Prepare order data
+                const order = {
+                    customer: { name, phone, email },
+                    delivery: {
+                        method: this.deliveryMethod,
+                        address: this.deliveryMethod === 'delivery' ? address : null
+                    },
+                    items: CartService.getCart(),
+                    subtotal: CartService.getSubtotal(),
+                    deliveryFee: DeliveryService.calculateDeliveryFee(CartService.getSubtotal(), this.deliveryMethod),
+                    total: CartService.getSubtotal() + DeliveryService.calculateDeliveryFee(CartService.getSubtotal(), this.deliveryMethod),
+                    specialInstructions: document.getElementById('specialInstructions').value.trim(),
+                    timestamp: new Date().toISOString(),
+                    orderId: 'TFB-' + Date.now().toString().slice(-6)
+                };
+                
+                // In a real app, you would send this to your backend
+                // For now, we'll simulate a successful order
+                
+                // Show success message
+                NotificationService.show(`Order ${order.orderId} placed successfully! We'll contact you soon.`);
+                
+                // Clear cart
+                CartService.clearCart();
+                this.updateCartDisplay();
+                this.updateOrderSummary();
+                
+                // Reset form
+                e.target.reset();
+                this.setDeliveryMethod('delivery');
+                
+                // Generate receipt (in real app, this would be a PDF or email)
+                this.generateReceipt(order);
+            }
+
+            generateReceipt(order) {
+                console.log('Order Receipt:', order);
+                // In production, you would:
+                // 1. Send email to customer
+                // 2. Send notification to butchery
+                // 3. Save to database
+                // 4. Generate PDF receipt
+            }
+
+            renderReviews() {
+                const reviewsGrid = document.querySelector('.reviews-grid');
+                const reviews = ReviewService.getReviews();
+                
+                reviewsGrid.innerHTML = reviews.map(review => `
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar" aria-hidden="true">${review.avatar}</div>
+                                <div>
+                                    <div class="reviewer-name">${review.name}</div>
+                                    <div class="review-date">${new Date(review.date).toLocaleDateString('en-KE', { 
+                                        year: 'numeric', 
+                                        month: 'long', 
+                                        day: 'numeric' 
+                                    })}</div>
+                                </div>
+                            </div>
+                            <div class="review-stars" aria-label="${review.rating} out of 5 stars">
+                                ${'★'.repeat(Math.floor(review.rating))}${review.rating % 1 ? '½' : ''}${'☆'.repeat(5 - Math.ceil(review.rating))}
+                            </div>
+                        </div>
+                        <p class="review-comment">${review.comment}</p>
+                    </div>
+                `).join('');
+            }
+
+            setCurrentYear() {
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            }
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = new ThirdforceButcheryApp();
+            
+            // Make app available globally for debugging
+            window.ThirdforceApp = app;
+        });
+    </script>
+</body>
+</html>
